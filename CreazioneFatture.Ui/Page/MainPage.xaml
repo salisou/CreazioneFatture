@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CreazioneFatture.Ui.Page.MainPage"
+             Title="MainPage">
+
+    <Grid RowDefinitions=".8*,.2*">
+        <VerticalStackLayout HeightRequest="500"  Spacing="10">
+            <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*"  Margin="10">
+                <Entry Placeholder="CL_Nome" Text="{Binding CurrentCliente.CL_Nome}"/>
+                <Entry Placeholder="CL_Cognome" Text="{Binding CurrentCliente.CL_Cognome}" Grid.Column="1"/>
+                <Entry Placeholder="CL_PIva" Text="{Binding CurrentCliente.CL_PIva}"       Grid.Row="1" Grid.Column="0"/>
+                <Entry Placeholder="CL_Cell1" Text="{Binding CurrentCliente.CL_Cell1}"     Grid.Row="1" Grid.Column="2"/>
+                <Entry Placeholder="CL_Cell2" Text="{Binding CurrentCliente.CL_Cell2}"     Grid.Row="2" Grid.Column="0"/>
+                <Entry Placeholder="CL_Mail1" Text="{Binding CurrentCliente.CL_Mail1}"     Grid.Row="2" Grid.Column="1"/>
+                <Entry Placeholder="CL_Mail2" Text="{Binding CurrentCliente.CL_Mail2}"     Grid.Row="3" Grid.Column="0"/>
+                <Entry Placeholder="CL_Pec" Text="{Binding CurrentCliente.CL_Pec}"         Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Margin="20">
+            <Button  Text="Add or Update" Command="{Binding AddOrUpdateCommand}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
